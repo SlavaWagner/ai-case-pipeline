@@ -44,31 +44,31 @@ export async function runDeepDive(winningWindow) {
         { keyword: 'premium b2b software setup', matchType: 'PHRASE', roas: 7.8, conversions: 145, cpa: '34.20 €' },
         { keyword: '+enterprise +automation', matchType: 'BROAD_MODIFIED', roas: 6.2, conversions: 110, cpa: '42.10 €' }
       ],
-      negativeKeywordLoops: ['kostenlos', 'gratis', 'schulung', 'gehalt', 'jobs']
+      negativeKeywordLoops: ['free', 'cheap', 'cheap download', 'salary', 'jobs']
     },
     assetAnalysis: {
       topHeadlines: [
-        'Exklusive B2B Lead-Skalierung',
-        'In 30 Tagen zu 5x ROAS',
-        'Automatisierte Ads-Architektur'
+        'Exclusive B2B Lead Scaling',
+        'Achieve 5x ROAS in 30 Days',
+        'Automated Ads Architecture'
       ],
       topDescriptions: [
-        'Erreichen Sie kaufkräftige B2B-Entscheider mit unserer validierten Conversion-Hierarchie.',
-        'Sichern Sie sich planbares Wachstum durch KI-gestützte Google Ads Optimierung.'
+        'Reach high-intent B2B decision makers with our validated conversion hierarchy.',
+        'Secure predictable growth with AI-powered Google Ads optimization.'
       ],
-      visualAssets: ['Infografik_Conversion_Wert_Hierarchie.png', 'Chart_ROAS_Spike.png']
+      visualAssets: ['Infographic_Conversion_Value_Hierarchy.png', 'Chart_ROAS_Spike.png']
     },
     conversionActionHierarchy: {
-      primaryValue: 'Qualified Lead Appointment (Wert: 350 €)',
-      secondaryValue: 'Whitepaper Download (Wert: 25 €)',
-      microValue: 'High-Intent Pricing Page Visit (Wert: 5 €)',
-      strategy: 'Value-Based Bidding (tROAS) abgestimmt auf echte Deckungsbeiträge statt reiner Klicks.'
+      primaryValue: 'Qualified Lead Appointment (Value: 350 €)',
+      secondaryValue: 'Whitepaper Download (Value: 25 €)',
+      microValue: 'High-Intent Pricing Page Visit (Value: 5 €)',
+      strategy: 'Value-Based Bidding (tROAS) aligned with true profit margins instead of raw clicks.'
     },
     targetRoasTrajectory: {
       initialTarget: '300%',
       optimizedTarget: '550%',
       actualAchieved: '700%',
-      hiddenDetail: 'Das Sahnehäubchen: Einzigartige Custom-Intent Signale kombiniert mit Offline Conversion Tracking (OCT) Rückkoppelung nach 14 Tagen Hubspot-Deal-Qualifizierung.'
+      hiddenDetail: 'The Secret Sauce: Unique custom intent signals combined with 14-day Offline Conversion Tracking (OCT) feedback loops after HubSpot deal qualification.'
     }
   };
 }

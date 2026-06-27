@@ -10,159 +10,159 @@ export async function generateCaseContent(deepDiveData, accountName = 'Premium A
 
   console.log(chalk.cyan(`[AI-ENGINE] Processing Case Synthesis via Antigravity CLI Architecture...`));
 
-  // 1. Case als Fließtext
-  const fliesstext = `# CASE STUDY: Wie ${accountName} im Zeitraum ${timeframe} einen ROAS von ${metrics.roas} erzielte
+  // 1. Case Overview Narrative
+  const fliesstext = `# CASE STUDY: How ${accountName} Achieved a ${metrics.roas} ROAS in ${timeframe}
 
-## 1. Ausgangslage & Herausforderung
-Vor der Optimierung kämpfte der Account in stark umkämpften B2B-Segmenten mit schwankenden CPLs und unzureichender Qualifizierung der Leads. Das primäre Ziel war die Etablierung eines planbaren, skaliersicheren Performance-Kanals mit fokussierter Ausrichtung auf kaufkräftige Zielgruppen.
+## 1. Executive Summary & Background
+Prior to optimization, the account faced high competition in premium B2B segments, leading to volatile CPLs and unqualified leads. The primary objective was establishing a scalable, predictable performance acquisition channel focused exclusively on high-intent decision makers.
 
-## 2. Die angewendete Angle-Struktur (Anonymisiert)
-Die Strategie baute auf dem "Positioning & Premium Solution Frame" Angle auf. Statt allgemeiner Rabatte oder klassischer Lead-Magneten lag der Fokus auf der Lösung tiefgreifender operativer Engpässe bei Entscheidern.
+## 2. Positioning & Angle Structure
+The overarching strategy leveraged the "Positioning & Premium Solution Frame" angle. Rather than competing on generic discounts, ad copy and campaign structures addressed deep operational bottlenecks experienced by C-suite executives.
 
-## 3. Die zugrundeliegende Conversion-Wert-Hierarchie
-Ein entscheidender Hebel war die Abkehr von flachen Conversion-Zielen. Über Value-Based Bidding wurden unterschiedliche Nutzeraktionen gewichtet:
+## 3. Underlying Conversion Value Hierarchy
+A critical growth lever was shifting away from flat lead-generation goals. Through Value-Based Bidding, specific user actions were strategically weighted:
 - **Primary:** ${conversionActionHierarchy.primaryValue}
 - **Secondary:** ${conversionActionHierarchy.secondaryValue}
 - **Micro:** ${conversionActionHierarchy.microValue}
 
-## 4. Das Sahnehäubchen (Hidden Detail)
+## 4. The Secret Sauce (Hidden Technical Detail)
 ✨ **${targetRoasTrajectory.hiddenDetail}**
 
-## 5. Resultate auf einen Blick
-- **Gesamtausgaben:** ${metrics.spend}
-- **Generierter Umsatz/Wert:** ${metrics.revenue}
-- **Erzielter ROAS:** ${metrics.roas}
-- **CPA / Kosten pro Lead:** ${metrics.cpa}
+## 5. Key Results at a Glance
+- **Total Spend:** ${metrics.spend}
+- **Generated Conversion Value:** ${metrics.revenue}
+- **Achieved ROAS:** ${metrics.roas}
+- **Average CPA / Cost per Lead:** ${metrics.cpa}
 `;
 
-  // 2. Ausführlicher Report
-  const report = `# AUSFÜHRLICHER PERFORMANCE & ARCHITEKTUR REPORT
+  // 2. Comprehensive Analytics Report
+  const report = `# COMPREHENSIVE PERFORMANCE & ARCHITECTURE REPORT
 **Account:** ${accountName}
-**Analysierter Zeitraum:** ${timeframe}
+**Analyzed Period:** ${timeframe}
 
 ---
 
 ### 📊 Key Metrics Summary
-| Metrik | Wert |
+| Metric | Value |
 | :--- | :--- |
-| **Werbeausgaben (Spend)** | ${metrics.spend} |
-| **Conversion-Wert** | ${metrics.revenue} |
-| **ROAS** | ${metrics.roas} |
-| **Conversions Total** | ${metrics.conversions} |
-| **Durchschnittlicher CPA** | ${metrics.cpa} |
+| **Ad Spend** | ${metrics.spend} |
+| **Conversion Value** | ${metrics.revenue} |
+| **Return on Ad Spend (ROAS)** | ${metrics.roas} |
+| **Total Conversions** | ${metrics.conversions} |
+| **Average Cost Per Acquisition (CPA)** | ${metrics.cpa} |
 
 ---
 
-### 🔑 Keyword- & Match-Type-Deep-Dive
-Top-Performende Keywords im Gewinn-Zeitraum:
+### 🔑 Keyword & Match-Type Deep-Dive
+Top performing driver keywords during the breakthrough window:
 ${keywordAnalysis.topPerformers.map(k => `- **${k.keyword}** (${k.matchType}): ROAS ${k.roas}x | ${k.conversions} Conversions | CPA ${k.cpa}`).join('\n')}
 
-**Auszuschließende Negativ-Keywords (Rückkopplung):**
+**Excluded Negative Keywords (Feedback Loop):**
 ${keywordAnalysis.negativeKeywordLoops.join(', ')}
 
 ---
 
 ### 🎨 Asset Performance Analysis
-**Höchstkonvertierende Headlines:**
+**Top Performing RSA Headlines:**
 ${assetAnalysis.topHeadlines.map(h => `- "${h}"`).join('\n')}
 
-**Höchstkonvertierende Beschreibungen:**
+**Top Performing RSA Descriptions:**
 ${assetAnalysis.topDescriptions.map(d => `- "${d}"`).join('\n')}
 
 ---
 
 ### ⚙️ Target ROAS & Bid Strategy Trajectory
-- **Start Ziel-ROAS:** ${targetRoasTrajectory.initialTarget}
-- **Optimierter Ziel-ROAS:** ${targetRoasTrajectory.optimizedTarget}
-- **Effektiv Erreicht:** ${targetRoasTrajectory.actualAchieved}
+- **Initial Target ROAS:** ${targetRoasTrajectory.initialTarget}
+- **Optimized Target ROAS:** ${targetRoasTrajectory.optimizedTarget}
+- **Actual Achieved:** ${targetRoasTrajectory.actualAchieved}
 
-**Strategischer Hebel:**
+**Strategic Growth Lever:**
 ${conversionActionHierarchy.strategy}
 `;
 
-  // 3. 10 LinkedIn-Post-Texte mit Headlines & Chart-Vorschlägen
-  const linkedinPosts = `# 10 HOCHKONVERTIERENDE LINKEDIN-POSTS (CASE STUDY COPYWRITING)
+  // 3. 10 LinkedIn Posts
+  const linkedinPosts = `# 10 HIGH-CONVERTING LINKEDIN POSTS (CASE STUDY COPYWRITING)
 
 ${Array.from({ length: 10 }).map((_, i) => `---
 ### 📌 LinkedIn Post ${i + 1}
-**Copywriting Headline:** ${[
-  'Wie wir in 90 Tagen den ROAS von 2.0x auf 7.0x katapultiert haben (Ohne mehr Budget zu verschwenden)',
-  'Die meisten Google Ads Kampagnen scheitern an flachen Conversion-Zielen. Hier ist die Lösung.',
-  '700% ROAS im B2B: Ein Blick hinter die Kulissen einer extrem profitablen Ads-Struktur.',
-  'Warum Value-Based Bidding das größte Geheimnis moderner Performance Marketer ist.',
-  'Das 350-Euro-Lead-Geheimnis: Wie Offline Conversion Tracking den Ads-Algorithmus schult.',
-  'Vergiss Broad Match ohne negative Keyword-Loops: So skalieren Premium-Kampagnen wirklich.',
-  'Case Study Insights: ${metrics.revenue} Werbewert mit nur ${metrics.spend} Ad Spend.',
-  'Wie du Ziel-ROAS Schritt für Schritt von 300% auf 550% anhebst, ohne dass die Conversions einbrechen.',
-  'Angle-Struktur entlarvt: Warum Lösungsorientierung im B2B Copywriting gewinnt.',
-  'Der ultimative Leitfaden für High-Ticket Google Ads setups.'
+**Copywriting Hook:** ${[
+  'How we scaled a Google Ads account from 2.0x to 7.0x ROAS in 90 days (without wasting ad budget)',
+  'Most Google Ads campaigns fail due to flat conversion tracking. Here is the exact fix.',
+  '700% ROAS in B2B: Behind the scenes of a high-ticket performance architecture.',
+  'Why Value-Based Bidding is the best-kept secret of modern performance markteers.',
+  'The $350 lead breakdown: How Offline Conversion Tracking trains Google AI algorithms.',
+  'Forget Broad Match without negative keyword loops: Here is how premium campaigns scale.',
+  'Case Study Insights: Generating ${metrics.revenue} conversion value from ${metrics.spend} spend.',
+  'How to scale Target ROAS from 300% to 550% without triggering conversion drop-offs.',
+  'Angle positioning revealed: Why outcome-focused copywriting wins in B2B acquisition.',
+  'The ultimate blueprint for enterprise Google Ads account restructuring.'
 ][i]}
 
 **Post Body:**
-Wir haben die Echtdaten aus unserem letzten Winning-Zeitraum analysiert: ${metrics.spend} Ad Spend verwandelten sich in ${metrics.revenue} Conversion-Wert. 🚀
+We audited the live data from our latest winning growth window: ${metrics.spend} in ad spend converted into ${metrics.revenue} in total conversion value. 🚀
 
-Das Geheimnis liegt nicht im schieren Budget, sondern im mathematischen Zusammenspiel aus 3 Elementen:
-1️⃣ Gewichten der Conversions (Primary vs. Micro Actions)
-2️⃣ Offline Conversion Tracking Rückkopplung
-3️⃣ Exakt ausgerichtetes Copywriting auf Entscheider-Ebene.
+The breakthrough wasn't brute force budget—it was the mathematical synergy of 3 key elements:
+1️⃣ Conversion Action weighting (Primary vs. Micro Actions)
+2️⃣ Closed-loop Offline Conversion Tracking (OCT)
+3️⃣ Executive-level positioning frames.
 
-Was war dein größter Durchbruch bei Google Ads dieses Jahr? Schreib es in die Kommentare! 👇
+What was your single biggest Google Ads breakthrough this year? Drop your thoughts below! 👇
 
-📉 **Chart-Vorschlag:** Bar-Chart mit Vorher-Nachher-Vergleich des ROAS (${targetRoasTrajectory.initialTarget} vs. ${targetRoasTrajectory.actualAchieved}) in Markenfarben.
+📉 **Visual Suggestion:** Bar chart comparing initial vs. optimized ROAS (${targetRoasTrajectory.initialTarget} vs. ${targetRoasTrajectory.actualAchieved}) with brand accent colors.
 `).join('\n')}
 `;
 
-  // 4. 10 Meta Ads & 10 Google Ads Anzeigentexte
-  const adsTexts = `# 10 META ADS & 10 GOOGLE ADS ANZEIGENTEXTE
+  // 4. Meta Ads & Google Ads Copywriting
+  const adsTexts = `# 10 META ADS & 10 GOOGLE ADS COPYWRITING SETS
 
-## 🔵 10 GOOGLE ADS TEXTE (RSA HEADLINES & DESCRIPTIONS)
+## 🔵 10 GOOGLE ADS COPY SETS (RSA HEADLINES & DESCRIPTIONS)
 ${Array.from({ length: 10 }).map((_, i) => `### Google Ad Set ${i + 1}
-- **Headline:** ${assetAnalysis.topHeadlines[i % assetAnalysis.topHeadlines.length]} | ${i + 1}x Skalierung
-- **Description:** ${assetAnalysis.topDescriptions[i % assetAnalysis.topDescriptions.length]} Erreichen Sie ${metrics.roas} ROAS mit System.
+- **Headline:** ${assetAnalysis.topHeadlines[i % assetAnalysis.topHeadlines.length]} | ${i + 1}x Scaling
+- **Description:** ${assetAnalysis.topDescriptions[i % assetAnalysis.topDescriptions.length]} Achieve ${metrics.roas} ROAS systematically.
 `).join('\n')}
 
 ---
 
-## 🟣 10 META ADS TEXTE (PRIMARY TEXT & HEADLINES)
+## 🟣 10 META ADS COPY SETS (PRIMARY TEXT & HEADLINES)
 ${Array.from({ length: 10 }).map((_, i) => `### Meta Ad ${i + 1}
-- **Headline:** Exklusive B2B Lead-Generierung (${metrics.roas} ROAS Case)
-- **Primary Text:** Schluss mit unqualifizierten Anfragen. Erfahren Sie in unserer neuen Case Study, wie wir ${metrics.revenue} Umsatz aus ${metrics.spend} Ad Spend generiert haben. Jetzt Case Study herunterladen und Setup nachbauen.
-- **CTA:** Mehr dazu / Jetzt herunterladen
+- **Headline:** Exclusive B2B Lead Acquisition (${metrics.roas} ROAS Case Study)
+- **Primary Text:** Stop burning budget on unqualified leads. Download our latest case study to see how we generated ${metrics.revenue} in revenue from ${metrics.spend} ad spend. Get the full step-by-step framework today.
+- **CTA:** Learn More / Download Guide
 `).join('\n')}
 `;
 
-  // 5. Landingpage-Text mit ausführlichem Blogartikel
-  const landingpageBlog = `# LANDINGPAGE-TEXT & AUSFÜHRLICHER BLOGARTIKEL
+  // 5. Landingpage Copy & Blog Article
+  const landingpageBlog = `# LANDING PAGE COPY & STEP-BY-STEP IMPLEMENTATION GUIDE
 
-## 🌐 LANDINGPAGE HERO & VALUE PROPOSITION
-**H1:** Wie Sie Ihre Google Ads auf ${metrics.roas} ROAS skalieren – Die exakt dokumentierte Case Study
-**Subheadline:** Erfahren Sie, wie durch Value-Based Bidding, exakte Keyword-Rückkopplung und Offline Tracking ein Werbewert von ${metrics.revenue} realisiert wurde.
-**CTA Button:** JETZT CASE STUDY GUIDELINE HERUNTERLADEN (PDF)
+## 🌐 LANDING PAGE HERO & VALUE PROPOSITION
+**H1:** How to Scale Your Google Ads to ${metrics.roas} ROAS – The Complete Case Study
+**Subheadline:** Discover how Value-Based Bidding, negative feedback loops, and offline conversion signals generated ${metrics.revenue} in verified value.
+**CTA Button:** DOWNLOAD THE FREE CASE STUDY BluePRINT (PDF)
 
 ---
 
-## 📝 AUSFÜHRLICHER BLOGARTIKEL
-### Titel: Step-by-Step Guide: Wie wir ein Google Ads Konto auf ${metrics.roas} ROAS skaliert haben
+## 📝 COMPREHENSIVE IMPLEMENTATION BLOG POST
+### Title: Step-by-Step Guide: Scaling a Google Ads Account to a ${metrics.roas} ROAS
 
-#### Einleitung
-Im Performance Marketing entscheiden oft kleine Details über den Erfolg oder Misserfolg riesiger Budgets. In diesem Blogartikel zeigen wir exakt, welche Schritte notwendig waren, um im Zeitraum **${timeframe}** ein herausragendes Ergebnis zu erzielen.
+#### Introduction
+In performance marketing, granular technical setup separates profitable campaigns from wasted budgets. In this step-by-step breakdown, we reveal the exact architecture implemented during **${timeframe}** to achieve extraordinary client return on ad spend.
 
-#### Step 1: Zeitraum-Analyse & Trend-Erkennung
-Zunächst durchleuchteten wir historische Datenfenster, um saisonale Muster von echten System-Durchbrüchen zu unterscheiden. Sobald der winning period identifiziert war, fokussierten wir uns auf die ursächlichen Kampagnen.
+#### Step 1: Historical Period Scanning & Trend Analysis
+We began by algorithmically scanning historical data windows to differentiate seasonal spikes from structural account breakthroughs. Once the winning window was isolated, we focused auditing efforts on core driving campaigns.
 
-#### Step 2: Deep-Dive Rückkopplung (Keywords & Assets)
-Wir bereinigten den Account durch strikte Negativ-Keyword-Loops (${keywordAnalysis.negativeKeywordLoops.join(', ')}) und verstärkten Exact-Match-Begriffe wie \`${keywordAnalysis.topPerformers[0].keyword}\`.
+#### Step 2: Deep-Dive Feedback Loops (Keywords & Assets)
+We cleansed ad traffic by building aggressive negative keyword loops (${keywordAnalysis.negativeKeywordLoops.join(', ')}) while scaling top exact-match terms such as \`${keywordAnalysis.topPerformers[0].keyword}\`.
 
-#### Step 3: Implementierung der Conversion-Wert-Hierarchie
-Statt jede Lead-Anfrage gleich zu behandeln, ordneten wir Werte zu:
-- Qualified Appointments erhalten die höchste Priorität.
-- Micro Conversions dienen dem Algorithmus als Frühindikator.
+#### Step 3: Implementing Conversion Value Hierarchies
+Instead of treating all conversion leads equally, we implemented specific value weights:
+- Qualified Appointments received primary algorithm priority.
+- Content Downloads and micro-conversions served as early intent signals.
 
-#### Step 4: Das Sahnehäubchen (Der finale Skalierungshebel)
+#### Step 4: The Secret Sauce (The Final Growth Lever)
 ${targetRoasTrajectory.hiddenDetail}
 
-#### Fazit & Anleitung zum Nachbauen
-Jeder Marketer kann dieses Setup nachbauen. Starten Sie mit der Überprüfung Ihrer Conversion-Werte, etablieren Sie Feedback-Schleifen und passen Sie Ihren Ziel-ROAS dynamisch an.
+#### Conclusion & Actionable Next Steps
+Any growth team can replicate this system. Start by auditing your conversion action values, establishing offline feedback loops, and dynamically scaling target ROAS targets.
 `;
 
   return {

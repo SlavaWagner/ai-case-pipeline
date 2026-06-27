@@ -11,7 +11,7 @@ const CASES_DIR = path.join(STORAGE_DIR, 'cases');
 const LOGS_DIR = path.join(STORAGE_DIR, 'logs');
 
 /**
- * Initializes required directories.
+ * Initializes required storage directories.
  */
 export function initStorage() {
   if (!fs.existsSync(STORAGE_DIR)) fs.mkdirSync(STORAGE_DIR, { recursive: true });
@@ -20,7 +20,7 @@ export function initStorage() {
 }
 
 /**
- * Saves a completed case analysis object locally.
+ * Saves a completed case analysis record locally.
  */
 export function saveCaseRecord(caseData) {
   initStorage();
@@ -61,38 +61,38 @@ export function exportCaseToDesktop(caseBundle, customSubfolderName) {
     fs.mkdirSync(exportDir, { recursive: true });
   }
 
-  // File 1: Case als Fließtext
+  // File 1: Executive Case Overview Narrative
   fs.writeFileSync(
-    path.join(exportDir, '01_Case_Fliesstext.md'),
-    caseBundle.fliesstext || '# Case Study Fließtext\n\nKein Text generiert.',
+    path.join(exportDir, '01_Case_Study_Overview.md'),
+    caseBundle.fliesstext || '# Case Study Overview\n\nNo content generated.',
     'utf-8'
   );
 
-  // File 2: Ausführlicher Report
+  // File 2: Comprehensive Analytics Report
   fs.writeFileSync(
-    path.join(exportDir, '02_Ausfuehrlicher_Report.md'),
-    caseBundle.report || '# Ausführlicher Analytics Report\n\nKein Report generiert.',
+    path.join(exportDir, '02_Comprehensive_Analytics_Report.md'),
+    caseBundle.report || '# Comprehensive Analytics Report\n\nNo content generated.',
     'utf-8'
   );
 
-  // File 3: 10 LinkedIn-Post-Texte
+  // File 3: 10x LinkedIn Posts
   fs.writeFileSync(
     path.join(exportDir, '03_LinkedIn_Posts_10x.md'),
-    caseBundle.linkedinPosts || '# 10x LinkedIn Posts\n\nKeine Posts generiert.',
+    caseBundle.linkedinPosts || '# 10x LinkedIn Posts\n\nNo content generated.',
     'utf-8'
   );
 
-  // File 4: 10 Meta Ads & 10 Google Ads Anzeigentexte
+  // File 4: Meta & Google Ads Copywriting
   fs.writeFileSync(
-    path.join(exportDir, '04_Meta_Google_Ads_Texts.md'),
-    caseBundle.adsTexts || '# Meta & Google Ads Copywriting\n\nKeine Anzeigentexte generiert.',
+    path.join(exportDir, '04_Meta_Google_Ads_Copywriting.md'),
+    caseBundle.adsTexts || '# Meta & Google Ads Copywriting\n\nNo content generated.',
     'utf-8'
   );
 
-  // File 5: Landingpage-Text mit ausführlichem Blogartikel
+  // File 5: Landingpage Copy & Blog Implementation Guide
   fs.writeFileSync(
-    path.join(exportDir, '05_Landingpage_Blogartikel.md'),
-    caseBundle.landingpageBlog || '# Landingpage & Blogartikel\n\nKein Content generiert.',
+    path.join(exportDir, '05_Landingpage_Blog_Guide.md'),
+    caseBundle.landingpageBlog || '# Landingpage Copy & Blog Guide\n\nNo content generated.',
     'utf-8'
   );
 

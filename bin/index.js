@@ -41,7 +41,7 @@ function getAsciiLogo() {
     '',
     chalk.bold.green('=== ai-case-pipeline - Autonomous AI Case Study & Ads Forge ==='),
     chalk.cyan('Optimized for Google Ads API & Antigravity CLI Architecture'),
-    chalk.gray('Powered by Google Antigravity CLI persistent AI agents'),
+    chalk.gray('Created with the help of the Google Antigravity CLI'),
     ''
   ].join('\n');
 }
@@ -50,7 +50,7 @@ const program = new Command();
 
 program
   .name('ai-case-pipeline')
-  .description('Autonomous AI Case-Schmiede for Google Ads Analysis & Content Creation')
+  .description('Autonomous AI Case Forge for Google Ads Performance Analysis & Content Creation')
   .version('1.0.0');
 
 program.addHelpText('before', getAsciiLogo());
@@ -58,24 +58,24 @@ program.addHelpText('before', getAsciiLogo());
 async function runInteractiveDashboard() {
   console.clear();
   console.log(getAsciiLogo());
-  console.log(chalk.bold.yellow('================ DASHBOARD & VERFÜGBARE BEFEHLE ================'));
-  console.log(chalk.cyan(' 1. run / analyze      - ') + chalk.white('Vollständigen Case-Schmiede-Prozess starten'));
-  console.log(chalk.cyan(' 2. scan-periods       - ') + chalk.white('Historische Zeiträume nach Durchbrüchen absuchen'));
-  console.log(chalk.cyan(' 3. deep-dive          - ') + chalk.white('Keyword-, Asset- & Conversion-Rückkopplung durchführen'));
-  console.log(chalk.cyan(' 4. setup              - ') + chalk.white('Google Ads API Zugangsdaten & KI-Einstellungen konfigurieren'));
-  console.log(chalk.cyan(' 5. status             - ') + chalk.white('Systemstatus & gespeicherte Cases anzeigen'));
-  console.log(chalk.cyan(' 6. help / dashboard    - ') + chalk.white('Diesen Hilfebildschirm aufrufen'));
+  console.log(chalk.bold.yellow('================ DASHBOARD & AVAILABLE COMMANDS ================'));
+  console.log(chalk.cyan(' 1. run / analyze      - ') + chalk.white('Launch full Case Forge pipeline'));
+  console.log(chalk.cyan(' 2. scan-periods       - ') + chalk.white('Scan historical date ranges for breakthrough periods'));
+  console.log(chalk.cyan(' 3. deep-dive          - ') + chalk.white('Conduct Keyword, Asset & Conversion feedback loops'));
+  console.log(chalk.cyan(' 4. setup              - ') + chalk.white('Configure Google Ads API credentials & AI settings'));
+  console.log(chalk.cyan(' 5. status             - ') + chalk.white('Display system status & saved case records'));
+  console.log(chalk.cyan(' 6. help / dashboard    - ') + chalk.white('Open this interactive dashboard screen'));
   console.log(chalk.yellow('=================================================================\n'));
 
   const action = await select({
-    message: 'Bitte wählen Sie einen Befehl aus:',
+    message: 'Please select a command to execute:',
     choices: [
-      { name: '🚀 Vollständige Case-Schmiede starten (run)', value: 'run' },
-      { name: '🔍 Zeiträume scannen (scan-periods)', value: 'scan-periods' },
-      { name: '🧬 Deep-Dive Analyse (deep-dive)', value: 'deep-dive' },
-      { name: '⚙️ Google Ads API Setup (setup)', value: 'setup' },
-      { name: '📊 Systemstatus anzeigen (status)', value: 'status' },
-      { name: '❌ Beenden', value: 'exit' }
+      { name: '🚀 Launch Full Case Forge Pipeline (run)', value: 'run' },
+      { name: '🔍 Scan Historical Periods (scan-periods)', value: 'scan-periods' },
+      { name: '🧬 Execute Deep-Dive Analysis (deep-dive)', value: 'deep-dive' },
+      { name: '⚙️ Configure Google Ads API (setup)', value: 'setup' },
+      { name: '📊 View System Status (status)', value: 'status' },
+      { name: '❌ Exit', value: 'exit' }
     ]
   });
 
@@ -94,7 +94,7 @@ async function runInteractiveDashboard() {
   } else if (action === 'status') {
     await showStatus();
   } else {
-    console.log(chalk.gray('Auf Wiedersehen!'));
+    console.log(chalk.gray('Goodbye!'));
   }
 }
 
@@ -102,11 +102,11 @@ async function executeSetup() {
   console.log(chalk.bold.cyan('\n=== Google Ads API & Antigravity Setup ===\n'));
   const current = getConfig();
 
-  const customerId = await input({ message: 'Google Ads Customer ID (z.B. 123-456-7890):', default: current.customerId });
+  const customerId = await input({ message: 'Google Ads Customer ID (e.g. 123-456-7890):', default: current.customerId });
   const developerToken = await input({ message: 'Google Ads Developer Token:', default: current.developerToken });
   const clientId = await input({ message: 'Google Ads Client ID:', default: current.clientId });
   const clientSecret = await input({ message: 'Google Ads Client Secret:', default: current.clientSecret });
-  const refreshToken = await input({ message: 'Google Ads Refresh Token (oder OAuth2):', default: current.refreshToken });
+  const refreshToken = await input({ message: 'Google Ads Refresh Token (or OAuth2):', default: current.refreshToken });
   const loginCustomerId = await input({ message: 'Manager Login Customer ID (Optional):', default: current.loginCustomerId || '' });
 
   const updated = saveConfig({
@@ -118,13 +118,13 @@ async function executeSetup() {
     loginCustomerId
   });
 
-  console.log(chalk.bold.green('\n✓ Konfiguration erfolgreich gespeichert in config.json!'));
+  console.log(chalk.bold.green('\n✓ Configuration successfully saved to config.json!'));
 }
 
 async function executePipeline() {
-  console.log(chalk.bold.magenta('\n=== STARTE FULL AI CASE-SCHMIEDE PIPELINE ===\n'));
+  console.log(chalk.bold.magenta('\n=== LAUNCHING FULL AI CASE FORGE PIPELINE ===\n'));
   const config = getConfig();
-  const accountName = await input({ message: 'Name des Kunden / Accounts für die Case Study:', default: 'Premium Business Account' });
+  const accountName = await input({ message: 'Enter Account/Client Name for the Case Study:', default: 'Premium Ads Account' });
 
   const scanner = new PeriodScannerAgent();
   const winningWindow = await scanner.run(config.customerId);
@@ -138,23 +138,23 @@ async function executePipeline() {
   const exporter = new ExportAgent();
   await exporter.run(caseBundle);
 
-  console.log(chalk.bold.yellow('\n🎉 AI CASE-SCHMIEDE PIPELINE ERFOLGREICH ABGESCHLOSSEN!'));
+  console.log(chalk.bold.yellow('\n🎉 AI CASE FORGE PIPELINE COMPLETED SUCCESSFULLY!'));
 }
 
 async function showStatus() {
   const config = getConfig();
   const cases = listCases();
 
-  console.log(chalk.bold.cyan('\n=== SYSTEMSTATUS & GESPEICHERTE CASES ===\n'));
-  console.log(chalk.white(`Google Ads Customer ID: ${config.customerId || 'Nicht konfiguriert'}`));
-  console.log(chalk.white(`Developer Token status: ${config.developerToken ? 'Konfiguriert ✓' : 'Fehlt ❌'}`));
+  console.log(chalk.bold.cyan('\n=== SYSTEM STATUS & SAVED CASES ===\n'));
+  console.log(chalk.white(`Google Ads Customer ID: ${config.customerId || 'Not configured'}`));
+  console.log(chalk.white(`Developer Token status: ${config.developerToken ? 'Configured ✓' : 'Missing ❌'}`));
   console.log(chalk.white(`AI Engine Mode: ${config.aiEngine || 'antigravity'}`));
-  console.log(chalk.white(`Gespeicherte Cases in storage/cases: ${cases.length}`));
+  console.log(chalk.white(`Saved Cases in storage/cases: ${cases.length}`));
   
   if (cases.length > 0) {
-    console.log(chalk.yellow('\nLetzte gespeicherte Case Records:'));
+    console.log(chalk.yellow('\nRecent Saved Case Records:'));
     cases.slice(0, 5).forEach(c => {
-      console.log(chalk.gray(`- [${c.accountName}] Zeitraum: ${c.timeframe} (Datei: ${c.filename})`));
+      console.log(chalk.gray(`- [${c.accountName}] Period: ${c.timeframe} (File: ${c.filename})`));
     });
   }
   console.log('');
@@ -163,23 +163,23 @@ async function showStatus() {
 program
   .command('dashboard')
   .alias('help-menu')
-  .description('Zeigt das interaktive CLI-Startfenster und die Befehlsübersicht')
+  .description('Displays the interactive CLI start window and command dashboard')
   .action(runInteractiveDashboard);
 
 program
   .command('setup')
-  .description('Richtet Google Ads API Zugangsdaten und Antigravity CLI Optionen ein')
+  .description('Configures Google Ads API credentials and Antigravity CLI options')
   .action(executeSetup);
 
 program
   .command('run')
   .alias('analyze')
-  .description('Startet die vollständige autonome Case-Schmiede Pipeline')
+  .description('Launches the full autonomous Case Forge pipeline')
   .action(executePipeline);
 
 program
   .command('scan-periods')
-  .description('Sucht in historischen Daten nach Gewinn-Zeiträumen')
+  .description('Scans historical account data for breakthrough performance periods')
   .action(async () => {
     const scanner = new PeriodScannerAgent();
     await scanner.run();
@@ -187,7 +187,7 @@ program
 
 program
   .command('deep-dive')
-  .description('Führt Keyword-, Asset- und Conversion-Deep-Dive durch')
+  .description('Executes keyword, asset, and conversion feedback loops')
   .action(async () => {
     const scanner = new PeriodScannerAgent();
     const winningWindow = await scanner.run();
@@ -197,7 +197,7 @@ program
 
 program
   .command('status')
-  .description('Zeigt den aktuellen Systemstatus an')
+  .description('Displays current system status and saved cases')
   .action(showStatus);
 
 if (process.argv.length <= 2) {
