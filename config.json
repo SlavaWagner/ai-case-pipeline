@@ -1,0 +1,10 @@
+{
+  "customerId": "",
+  "developerToken": "",
+  "clientId": "",
+  "clientSecret": "",
+  "refreshToken": "",
+  "loginCustomerId": "",
+  "aiEngine": "antigravity",
+  "exportPath": "Desktop/Case_Studies"
+}

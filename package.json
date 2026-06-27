@@ -1,0 +1,24 @@
+{
+  "name": "ai-case-pipeline",
+  "version": "1.0.0",
+  "description": "Autonomous AI Case Study Generator & Google Ads Analysis Pipeline for Antigravity CLI",
+  "main": "bin/index.js",
+  "type": "module",
+  "bin": {
+    "ai-case-pipeline": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node bin/index.js",
+    "dashboard": "node bin/index.js dashboard",
+    "help": "node bin/index.js help",
+    "setup": "node bin/index.js setup",
+    "run": "node bin/index.js run"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.1.0",
+    "axios": "^1.7.9",
+    "chalk": "^5.4.1",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
