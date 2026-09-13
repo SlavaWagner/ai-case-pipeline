@@ -102,14 +102,14 @@ Your inputs are securely saved locally to `config.json`.
 
 Alle Befehle werden innerhalb der Google Antigravity CLI (`agy`) ausgeführt:
 
-| Befehl | Argumente / Optionen | Kurzbeschreibung |
-| :--- | :--- | :--- |
-| `ai-case-pipeline run`<br>*(Alias: `analyze`)* | Keine *(interaktive Abfrage des Account-Namens)* | Startet die vollständige 4-Agenten Case Forge Pipeline: Historischer Scan, Identifikation des Breakthrough-Fensters, Deep-Dive Analyse und automatische Erstellung von 5 Marketing-Assets auf dem Desktop. |
-| `ai-case-pipeline scan-periods` | Keine | Führt einen isolierten Scan über historische Leistungszeiträume des Google Ads Accounts aus und ermittelt das profitabelste "Winning Window". |
-| `ai-case-pipeline deep-dive` | Keine | Führt granulare Feedback-Loops auf Gewinner-Keywords, Negative-Listen, Asset-Headlines und Conversion-Hierarchien durch. |
-| `ai-case-pipeline dashboard`<br>*(Alias: `help-menu`)* | Keine | Öffnet das interaktive Terminal-Dashboard zur schnellen Ausführung sämtlicher Pipeline-Aktionen ohne Browser. |
-| `ai-case-pipeline status` | Keine | Zeigt den aktuellen System- und API-Status sowie die Liste aller bisher in `storage/cases/` abgelegten Fallstudien an. |
-| `ai-case-pipeline setup` | Keine | Interaktiver Einrichtungsassistent zur Konfiguration von Google Ads API Credentials (Customer ID, Developer Token, OAuth Client ID & Secret, Refresh Token). |
+| Befehl | Kurzbeschreibung |
+| :--- | :--- |
+| `ai-case-pipeline run`<br>*(Alias: `analyze`)* | Startet die vollständige 4-Agenten Case Forge Pipeline: Historischer Scan, Identifikation des Breakthrough-Fensters, Deep-Dive Analyse und automatische Erstellung von 5 Marketing-Assets auf dem Desktop. |
+| `ai-case-pipeline scan-periods` | Führt einen isolierten Scan über historische Leistungszeiträume des Google Ads Accounts aus und ermittelt das profitabelste "Winning Window". |
+| `ai-case-pipeline deep-dive` | Führt granulare Feedback-Loops auf Gewinner-Keywords, Negative-Listen, Asset-Headlines und Conversion-Hierarchien durch. |
+| `ai-case-pipeline dashboard`<br>*(Alias: `help-menu`)* | Öffnet das interaktive Terminal-Dashboard zur schnellen Ausführung sämtlicher Pipeline-Aktionen ohne Browser. |
+| `ai-case-pipeline status` | Zeigt den aktuellen System- und API-Status sowie die Liste aller bisher in `storage/cases/` abgelegten Fallstudien an. |
+| `ai-case-pipeline setup` | Interaktiver Einrichtungsassistent zur Konfiguration von Google Ads API Credentials (Customer ID, Developer Token, OAuth Client ID & Secret, Refresh Token). |
 
 ### Beteiligte KI-Agenten
 
