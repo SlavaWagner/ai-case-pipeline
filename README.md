@@ -98,18 +98,38 @@ Your inputs are securely saved locally to `config.json`.
 
 ---
 
-## 🛠 Commands & CLI Dashboard
+## 🛠 CLI & Agent Command Reference
 
-Launch the interactive CLI terminal dashboard at any time by running:
+Alle Befehle werden innerhalb der Google Antigravity CLI (`agy`) ausgeführt:
+
+| Befehl | Argumente / Optionen | Kurzbeschreibung |
+| :--- | :--- | :--- |
+| `ai-case-pipeline run`<br>*(Alias: `analyze`)* | Keine *(interaktive Abfrage des Account-Namens)* | Startet die vollständige 4-Agenten Case Forge Pipeline: Historischer Scan, Identifikation des Breakthrough-Fensters, Deep-Dive Analyse und automatische Erstellung von 5 Marketing-Assets auf dem Desktop. |
+| `ai-case-pipeline scan-periods` | Keine | Führt einen isolierten Scan über historische Leistungszeiträume des Google Ads Accounts aus und ermittelt das profitabelste "Winning Window". |
+| `ai-case-pipeline deep-dive` | Keine | Führt granulare Feedback-Loops auf Gewinner-Keywords, Negative-Listen, Asset-Headlines und Conversion-Hierarchien durch. |
+| `ai-case-pipeline dashboard`<br>*(Alias: `help-menu`)* | Keine | Öffnet das interaktive Terminal-Dashboard zur schnellen Ausführung sämtlicher Pipeline-Aktionen ohne Browser. |
+| `ai-case-pipeline status` | Keine | Zeigt den aktuellen System- und API-Status sowie die Liste aller bisher in `storage/cases/` abgelegten Fallstudien an. |
+| `ai-case-pipeline setup` | Keine | Interaktiver Einrichtungsassistent zur Konfiguration von Google Ads API Credentials (Customer ID, Developer Token, OAuth Client ID & Secret, Refresh Token). |
+
+### Beteiligte KI-Agenten
+
+*   **`PeriodScannerAgent`**: Analysiert historische Performance-Streams (CPA, Conversion Value, ROAS) zur mathematischen Identifikation profitabler Breakthrough-Zeitfenster.
+*   **`DeepDiveAgent`**: Untersucht Keywords, Suchbegriffe, RSA-Assets und Conversion-Hierarchien auf kausale Erfolgstreiber ("The Secret Sauce").
+*   **`CaseForgeAgent`**: Synthetisiert die quantitativen Rohdaten in hochkonvertierende Marketing-Assets und überzeugende B2B-Narrative.
+*   **`ExportAgent`**: Exportiert alle 5 fertigen Dokumente (Case Study, Report, 10x LinkedIn Posts, Ad Copy Sets, Blog Guide) direkt in den Desktop-Ordner `Desktop/Case_Studies/`.
+
+#### Anwendungsbeispiele:
+
 ```bash
-ai-case-pipeline dashboard
-# or
-ai-case-pipeline help
-```
+# 1. Vollständige Case Forge Pipeline ausführen:
+ai-case-pipeline run
 
-### Command Overview
-- `ai-case-pipeline run` (or `analyze`): Launches the full end-to-end Case Forge pipeline.
-- `ai-case-pipeline setup`: Runs the interactive Google Ads API setup wizard.
-- `ai-case-pipeline scan-periods`: Executes standalone historical timeframe scanning.
-- `ai-case-pipeline deep-dive`: Executes standalone keyword, asset, and conversion feedback loops.
-- `ai-case-pipeline status`: Displays current configuration status and saved case records.
+# 2. Interaktives Menü öffnen:
+ai-case-pipeline dashboard
+
+# 3. Nur Breakthrough-Perioden im Account scannen:
+ai-case-pipeline scan-periods
+
+# 4. Status und gespeicherte Cases anzeigen:
+ai-case-pipeline status
+```
